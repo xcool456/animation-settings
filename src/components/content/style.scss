@@ -1,0 +1,48 @@
+.content-block {
+	display: flex;
+	justify-content: space-between;
+	background-color: white;
+	padding: 73px 70px 115px 70px;
+
+	.left {
+		color: #222222;
+
+		#h1 {
+			padding-top: 18px;
+			font-size: 43px;
+			font-weight: 700;
+			line-height: 52px;
+			letter-spacing: -2px;
+			text-align: left;
+		}
+
+		#div {
+			padding-top: 20px;
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 22px;
+			letter-spacing: 0;
+			text-align: left;
+			width: 373px;
+		}
+
+		#button {
+			width: 136px;
+			height: 41px;
+			top: 430px;
+			left: 135px;
+			border-radius: 4px;
+			background: #70B2FF;
+			border: none;
+			margin-top: 25px;
+			margin-left: 5px;
+			//button text
+			font-size: 17px;
+			font-weight: 500;
+			line-height: 21px;
+			letter-spacing: 0;
+			text-align: center;
+			color: #FFFFFF;
+		}
+	}
+}

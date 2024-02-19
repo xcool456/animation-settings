@@ -1,0 +1,28 @@
+.preview-content {
+	padding: 70px 70px 0 70px;
+}
+
+.animate-element {
+	animation-duration: 1.6s;
+	animation-name: changewidth;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+
+	--effect-top: 0;
+	--effect-left: 0;
+	--effect-opacity: 100%;
+}
+
+.animate-element.active {
+}
+@keyframes changewidth {
+	from {
+	}
+
+	to {
+		position: relative;
+		transform: translate(var(--effect-left), var(--effect-top));
+		opacity: var(--effect-opacity);
+	}
+}
