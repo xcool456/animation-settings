@@ -29,10 +29,8 @@
 		#button {
 			width: 136px;
 			height: 41px;
-			top: 430px;
-			left: 135px;
 			border-radius: 4px;
-			background: #70B2FF;
+			background: #70b2ff;
 			border: none;
 			margin-top: 25px;
 			margin-left: 5px;
@@ -42,7 +40,26 @@
 			line-height: 21px;
 			letter-spacing: 0;
 			text-align: center;
-			color: #FFFFFF;
+			color: #ffffff;
 		}
+	}
+	.selected {
+		border: 1px solid #3e87f8 !important;
+		position: relative;
+
+		&:after {
+			content: ' ';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-image: url('border.png') 30 fill / 9px / 5px space !important;
+		}
+	}
+	img.selected {
+		outline: 1px solid #3e87f8;
+		outline-offset: -2px;
+		border-image: url('border.png') 30 fill / 9px / 3px space !important;
 	}
 }

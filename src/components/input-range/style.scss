@@ -19,6 +19,7 @@
     background-color: #FFFFFF;
     border-radius: 50%;
     border: 2px solid #AFAFAF;
+    z-index: 10;
   }
 
 }
@@ -41,4 +42,5 @@
   letter-spacing: 0;
   text-align: left;
   width: 30px;
+  padding-left: 8px;
 }

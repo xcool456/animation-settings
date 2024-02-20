@@ -3,20 +3,26 @@
 }
 
 .animate-element {
-	animation-duration: 1.6s;
-	animation-name: changewidth;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-	animation-fill-mode: forwards;
-
 	--effect-top: 0;
 	--effect-left: 0;
 	--effect-opacity: 100%;
+	--effect-scale: 1;
+	--effect-blur: 0;
+	--effect-speed: 0;
+	--effect-delay: 0;
+	--effect-easing: ease;
+	--effect-replay: infinite;
+
+	animation-timing-function: var(--effect-easing);
+	animation-duration: var(--effect-speed);
+	animation-delay: var(--effect-delay);
+	animation-name: animate;
+	animation-iteration-count: var(--effect-replay);
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
 }
 
-.animate-element.active {
-}
-@keyframes changewidth {
+@keyframes animate {
 	from {
 	}
 
@@ -24,5 +30,7 @@
 		position: relative;
 		transform: translate(var(--effect-left), var(--effect-top));
 		opacity: var(--effect-opacity);
+		scale: var(--effect-scale);
+		filter: blur(var(--effect-blur)),
 	}
 }
