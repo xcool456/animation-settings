@@ -8,7 +8,11 @@ export const MainContent = inject('store')(
 		return (
 			<>
 				<div className='main-content'>
-					<Content className='content-block' currentElement={store.currentElement} onClick={(event) => store.setCurrentElement(event.target)} />
+					<Content
+						className='content-block'
+						currentElement={store.currentElement}
+						onClick={(event) => store.setCurrentElement(event.target)}
+					/>
 				</div>
 				{store.currentElement && <PreviewElement />}
 			</>

@@ -7,7 +7,7 @@ export const Preview = () => {
 
 	useEffect(() => {
 		const localStorage = JSON.parse(window.localStorage.getItem('animations'));
-		setAnimations(localStorage)
+		setAnimations(localStorage);
 	}, []);
 
 	useEffect(() => {

@@ -24,8 +24,6 @@ export const Controls = inject('store')(
 				</Label>
 				<Label label='Opacity'>
 					<InputRange
-						min={0}
-						max={100}
 						showValue={`${store.currentElementAnimation.opacity || 0}%`}
 						value={store.currentElementAnimation.opacity || 0}
 						onChange={store.setProperty('opacity')}
@@ -33,9 +31,7 @@ export const Controls = inject('store')(
 				</Label>
 				<Label label='Scale'>
 					<InputRange
-						min={0}
 						max={20}
-						step={1}
 						start={10}
 						showValue={`${store.currentElementAnimation.scale / 10 || 0}`}
 						value={store.currentElementAnimation.scale || 0}
@@ -43,20 +39,11 @@ export const Controls = inject('store')(
 					/>
 				</Label>
 				<Label label='Blur'>
-					<InputRange
-						min={0}
-						max={10}
-						step={1}
-						start={5}
-						value={store.currentElementAnimation.blur || 0}
-						onChange={store.setProperty('blur')}
-					/>
+					<InputRange max={10} start={5} value={store.currentElementAnimation.blur || 0} onChange={store.setProperty('blur')} />
 				</Label>
 				<Label label='Speed'>
 					<InputRange
-						min={0}
 						max={9}
-						step={1}
 						showValue={`.${store.currentElementAnimation.speed || 0}s`}
 						value={store.currentElementAnimation.speed || 0}
 						onChange={store.setProperty('speed')}
@@ -64,9 +51,7 @@ export const Controls = inject('store')(
 				</Label>
 				<Label label='Delay'>
 					<InputRange
-						min={0}
 						max={20}
-						step={1}
 						showValue={`${store.currentElementAnimation.delay / 10 || 0}s`}
 						value={store.currentElementAnimation.delay || 0}
 						onChange={store.setProperty('delay')}
@@ -82,7 +67,6 @@ export const Controls = inject('store')(
 				</Label>
 				<Label label='Replay'>
 					<Checkbox
-						type='checkbox'
 						value={store.currentElementAnimation.replay}
 						onChange={store.setProperty('replay')}
 						disabled={!store.currentElement}

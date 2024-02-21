@@ -31,6 +31,6 @@
 		transform: translate(var(--effect-left), var(--effect-top));
 		opacity: var(--effect-opacity);
 		scale: var(--effect-scale);
-		filter: blur(var(--effect-blur)),
+		filter: blur(var(--effect-blur));
 	}
 }

@@ -3,9 +3,9 @@ import { makeAutoObservable } from 'mobx';
 const INIT_SETTINGS = {
 	x: 0,
 	y: 0,
-	opacity: 50,
+	opacity: 100,
 	scale: 10,
-	blur: 5,
+	blur: 0,
 	speed: 3,
 	delay: 0,
 	easing: 'ease',
@@ -23,6 +23,9 @@ class MainStore {
 
 	setCurrentElement = (el) => {
 		this.currentElement = el;
+		if (!this.animations[el.id]) {
+			this.setNewAnimations(el.id, INIT_SETTINGS);
+		}
 	};
 
 	get currentElementAnimation() {
@@ -38,7 +41,6 @@ class MainStore {
 	setProperty = (prop) => (e) => {
 		const elementId = this.currentElement?.id;
 		if (elementId) {
-			this.animations[this.currentElement.id] = this.animations[this.currentElement.id] ?? INIT_SETTINGS;
 			switch (e.target.type) {
 				case 'select-one': {
 					this.animations[elementId][prop] = e.target.value;
@@ -54,6 +56,11 @@ class MainStore {
 			}
 			this.updateLocalStorage();
 		}
+	};
+
+	setNewAnimations = (id, animations) => {
+		this.animations[id] = animations;
+		this.updateLocalStorage();
 	};
 
 	updateLocalStorage = () => {

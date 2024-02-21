@@ -1,46 +1,45 @@
 .input-range {
-  -webkit-appearance: none;
-  appearance: none;
-  position: relative;
+	-webkit-appearance: none;
+	appearance: none;
+	position: relative;
 
-  color: #AFAFAF;
-  border-radius: 1px;
-  height: 2px;
-  background: #E0E0E0;
-  width:118px;
+	color: #afafaf;
+	border-radius: 1px;
+	height: 2px;
+	background: #e0e0e0;
+	width: 118px;
 
-  &::-webkit-slider-thumb {
-    /* removing default appearance */
-    -webkit-appearance: none;
-    appearance: none;
-    /* creating a custom design */
-    height: 12px;
-    width: 12px;
-    background-color: #FFFFFF;
-    border-radius: 50%;
-    border: 2px solid #AFAFAF;
-    z-index: 10;
-  }
-
+	&::-webkit-slider-thumb {
+		/* removing default appearance */
+		-webkit-appearance: none;
+		appearance: none;
+		/* creating a custom design */
+		height: 12px;
+		width: 12px;
+		background-color: #ffffff;
+		border-radius: 50%;
+		border: 2px solid #afafaf;
+		z-index: 10;
+	}
 }
 
 .input-range::before {
-  content: '';
-  width: var(--width);
-  height: 2px;
-  position: absolute;
-  background-color: #AFAFAF;
-  top: 50%;
-  transform: translateY(-50%);
-  left: var(--left);
+	content: '';
+	width: var(--width);
+	height: 2px;
+	position: absolute;
+	background-color: #afafaf;
+	top: 50%;
+	transform: translateY(-50%);
+	left: var(--left);
 }
 
 .input-range-value {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 16px;
-  letter-spacing: 0;
-  text-align: left;
-  width: 30px;
-  padding-left: 8px;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: 0;
+	text-align: left;
+	width: 30px;
+	padding-left: 8px;
 }
